@@ -140,9 +140,7 @@ NAVIGATION STYLES
 SIDEBARS & ASIDES
 *********************/
 
-.sidebar {
-	margin-top: 2.2em;
-}
+.sidebar {}
 
 	.widgettitle {
 		border-bottom: 2px solid #444;
@@ -262,7 +260,7 @@ SIDEBARS & ASIDES
 POSTS & CONTENT STYLES
 *********************/
 #content {
-	padding-top: 120px;
+	padding: 120px 0 60px 0;
 }
 .entry-content {
 	font-size: 22px;

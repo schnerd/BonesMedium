@@ -115,6 +115,17 @@ function bones_gallery_style($css) {
   return preg_replace( "!<style type='text/css'>(.*?)</style>!s", '', $css );
 }
 
+function bones_blog_image() {
+	// Eventually insert magic here
+	$blog_image = null;
+
+	if (!$blog_image) {
+		$blog_image = get_template_directory_uri() . '/screenshot.png';
+	}
+	
+	return $blog_image;
+}
+
 
 /*********************
 SCRIPTS & ENQUEUEING
@@ -263,6 +274,16 @@ function bones_footer_links() {
 	));
 } /* end bones footer link */
 
+// Don't dispaly 'Uncategorized'
+function bones_get_category_list($separator) {
+	$categories = get_the_category_list($separator);
+	$categories = explode($separator, $categories);
+	$categories = array_filter($categories, function($item){
+		return stripos($item, __('Uncategorized')) === FALSE;
+	});
+	return implode($separator, $categories);
+}
+
 /*********************
 RELATED POSTS FUNCTION
 *********************/
@@ -293,6 +314,11 @@ function bones_related_posts() {
 	wp_reset_query();
 	echo '</ul>';
 } /* end bones related posts function */
+
+// Get rid of the pesky Uncategorized category
+function bones_categories() {
+
+}
 
 /*********************
 PAGE NAVI

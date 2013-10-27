@@ -21,9 +21,10 @@
 
 								</header> <?php // end article header ?>
 
+<?php /*
 								<section class="entry-content clearfix">
 									<?php the_content(); ?>
-								</section> <?php // end article section ?>
+								</section> <?php // end article section */ ?>
 
 								<footer class="article-footer">
 									<p class="tags"><?php the_tags( '<span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '' ); ?></p>
