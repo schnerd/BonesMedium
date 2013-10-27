@@ -147,14 +147,6 @@ h5, .h5 {
 }
 
 /*********************
-HEADER STYLES
-*********************/
-
-.header {}
-
-	#logo {}
-
-/*********************
 NAVIGATION STYLES
 *********************/
 
@@ -167,8 +159,6 @@ and more scalable.
 */
 
 .nav {
-	border: 1px solid #ccc;
-	border-bottom: 0;
 
 	li {
 
@@ -244,6 +234,13 @@ POSTS & CONTENT STYLES
 
 #content {
 	margin-top: 2.2em;
+}
+#inner-content {
+	max-width: 700px;
+	margin: 0 auto;
+	position: relative;
+	right: 0;
+	@include transition(right 0.2s);
 }
 
 		.hentry {
@@ -729,6 +726,15 @@ SIDEBARS & ASIDES
 *********************/
 
 .sidebar {}
+
+.blog-side {
+	position: absolute;
+	width: 160px;
+	left: -230px;
+	border-top: 0;
+	padding-top: 0;
+	text-align: right;
+}
 
 	.widgettitle {}
 

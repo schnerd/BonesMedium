@@ -28,23 +28,16 @@ LAYOUT & GRID STYLES
 }
 
 /*********************
-HEADER STYLES
-*********************/
-
-.header {}
-
-	#logo {}
-
-/*********************
 NAVIGATION STYLES
 *********************/
 
 .nav {
-	background: #eee;
-	border: 0;
+
+	> ul {
+		margin: 10px 0;
+	}
 
 	li {
-		float: left;
 		position: relative;
 
 		a {

@@ -1,17 +1,21 @@
-				<div id="sidebar1" class="sidebar fourcol last clearfix" role="complementary">
+				<div class="sidebar">
 
-					<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
+					<div class="blog-side">
 
-						<?php dynamic_sidebar( 'sidebar1' ); ?>
+						<p class="blog-author h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
 
-					<?php else : ?>
+						<p class="blog-desc"><?php bloginfo('description'); ?></p>
 
-						<?php // This content shows up if there are no widgets defined in the backend. ?>
+						<nav role="navigation">
+							<?php bones_main_nav(); ?>
+						</nav>
 
-						<div class="alert alert-help">
-							<p><?php _e( 'Please activate some Widgets.', 'bonestheme' );  ?></p>
-						</div>
+						<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
 
-					<?php endif; ?>
+							<?php dynamic_sidebar( 'sidebar1' ); ?>
+
+						<?php endif; ?>
+
+					</div>
 
 				</div>
