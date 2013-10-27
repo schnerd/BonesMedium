@@ -2,13 +2,16 @@
 
 					<div class="blog-side">
 
-						<p class="blog-author h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
+						<p class="blog-author h3"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
 
 						<p class="blog-desc"><?php bloginfo('description'); ?></p>
 
+						<?php $main_nav = bones_main_nav(); ?>
+						<?php if ( $main_nav ) : ?>
 						<nav role="navigation">
-							<?php bones_main_nav(); ?>
+							<?php echo $main_nav; ?>
 						</nav>
+						<?php endif; ?>
 
 						<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
 

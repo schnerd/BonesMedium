@@ -39,8 +39,10 @@ NAVIGATION STYLES
 
 	li {
 		position: relative;
+		margin-top: 4px;
 
 		a {
+			display: inline-block;
 			border-bottom: 0;
 
 			/*
@@ -48,12 +50,21 @@ NAVIGATION STYLES
 			has the possibility of being a mobile device.
 			*/
 			&:hover, &:focus {
-				background-color: #dedede;
-
 			}
 		}
 
-		&:first-child {}
+		.button {
+			font-size: 12px;
+			padding: 2px 6px;
+		}
+		&.current-menu-item .button {
+			border-color: lighten($theme-color, 7%);
+			background-color: lighten($theme-color, 10%);
+		}
+
+		&:first-child {
+			margin-top: 0;
+		}
 		&:last-child {}
 
 		/*
@@ -247,6 +258,25 @@ SIDEBARS & ASIDES
 	.widget_text {}
 	.textwidget p {}
 
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+#content {
+	padding-top: 120px;
+}
+.entry-content {
+	font-size: 22px;
+	font-weight: 400;
+	p:first-child {
+		margin-top: 0;
+	}
+}
+.entry-title {
+	font-size: 52px;
+	font-weight: 700;
+	line-height: 1;
+	margin: 0;
+}
 
 /*********************
 FOOTER STYLES
