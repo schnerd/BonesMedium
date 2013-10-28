@@ -42,3 +42,13 @@
 	<body <?php body_class(); ?>>
 
 		<div id="container">
+		
+			<?php get_header(); ?>
+
+			<div id="content">
+
+				<div id="inner-content">
+
+					<?php get_sidebar(); ?>
+
+					<div id="main" role="main">

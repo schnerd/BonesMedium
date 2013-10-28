@@ -1,3 +1,9 @@
+					</div> <?php // end #main ?>
+
+				</div> <?php // end #inner-content ?>
+
+			</div> <?php // end #content ?>
+
 			<footer class="footer" role="contentinfo">
 
 				<div id="inner-footer" class="wrap clearfix">

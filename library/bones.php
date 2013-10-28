@@ -126,6 +126,27 @@ function bones_blog_image() {
 	return $blog_image;
 }
 
+function bones_vcard() {
+	printf( '<time class="updated" datetime="%1$s" pubdate>%2$s</time>', get_the_time( 'Y-m-j' ), get_the_time( get_option('date_format')) );
+
+	$categories = bones_get_category_list(', ');
+	if ($categories) {
+		printf(' &middot; in %1$s', $categories);
+	}
+
+	$tags = get_the_tags();
+	if ($tags) {
+		the_tags( ' &middot; ' . __( 'tagged', 'bonestheme' ) . ' ', ', ', '');
+	}
+}
+
+function bones_loop() {
+	require_once('loop.php');
+}
+
+function bones_no_results() {
+	require_once('noresults.php');
+}
 
 /*********************
 SCRIPTS & ENQUEUEING

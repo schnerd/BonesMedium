@@ -1454,6 +1454,15 @@ override these styles for the desktop
 view.
 */
 /* end .footer-links */
+/*********************
+PAGE-SPECIFIC
+*********************/
+/* line 859, ../scss/_base.scss */
+#post-not-found h1 {
+  margin: 0;
+  line-height: 1;
+}
+
 /*
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
