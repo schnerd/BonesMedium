@@ -182,6 +182,9 @@ POSTS & CONTENT STYLES
 	p:first-child {
 		margin-top: 0;
 	}
+	p:last-child {
+		margin-bottom: 0;
+	}
 
 	blockquote {
 		font-weight: 400;
@@ -244,11 +247,16 @@ POSTS & CONTENT STYLES
 		max-width: 100%;
 		margin-bottom: 0;
 		width: 100%;
+		vertical-align: top;
+	}
+	.img-border {
+		border: 1px solid #eee;
+		display: inline-block;
 	}
 }
 
 .wp-caption-text {
-	margin: 6px 0;
+	margin: 12px 0 6px;
 	font-size: 14px;
 	font-style: italic;
 	color: #666665;
@@ -257,7 +265,7 @@ POSTS & CONTENT STYLES
 
 .byline {
 	color: #999;
-	margin-top: 0;
+	margin-top: 30px;
 	a {
 		text-decoration: none;
 		&:hover {

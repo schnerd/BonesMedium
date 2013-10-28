@@ -1,5 +1,5 @@
 <?php
-class BonesMediumSettingsPage
+class MedianSettingsPage
 {
     /**
      * Holds the values to be used in the fields callbacks
@@ -22,10 +22,10 @@ class BonesMediumSettingsPage
     {
         // This page will be under "Settings"
         add_options_page(
-            'Bones Medium Theme Settings', 
-            'Bones Medium', 
+            'Median Theme Settings', 
+            'Median Theme', 
             'manage_options', 
-            'bm-setting-admin', 
+            'median-setting-admin', 
             array( $this, 'create_admin_page' )
         );
     }
@@ -36,16 +36,16 @@ class BonesMediumSettingsPage
     public function create_admin_page()
     {
         // Set class property
-        $this->options = get_option( 'bm_option_name' );
+        $this->options = get_option( 'median_option_name' );
         ?>
         <div class="wrap">
             <?php screen_icon(); ?>
-            <h2>Bones Medium Theme Settings</h2>           
+            <h2>Median Theme Settings</h2>           
             <form method="post" action="options.php">
             <?php
                 // This prints out all hidden setting fields
-                settings_fields( 'bm_option_group' );   
-                do_settings_sections( 'bm-setting-admin' );
+                settings_fields( 'median_option_group' );   
+                do_settings_sections( 'median-setting-admin' );
                 submit_button(); 
             ?>
             </form>
@@ -59,8 +59,8 @@ class BonesMediumSettingsPage
     public function page_init()
     {        
         register_setting(
-            'bm_option_group', // Option group
-            'bm_option_name', // Option name
+            'median_option_group', // Option group
+            'median_option_name', // Option name
             array( $this, 'sanitize' ) // Sanitize
         );
 
@@ -68,14 +68,14 @@ class BonesMediumSettingsPage
             'setting_section_id', // ID
             'General Settings', // Title
             null, // Callback
-            'bm-setting-admin' // Page
+            'median-setting-admin' // Page
         );  
 
         add_settings_field(
-            'bm_desc', // ID
+            'median_desc', // ID
             'Blog Description Override', // Title 
-            array( $this, 'bm_desc_callback' ), // Callback
-            'bm-setting-admin', // Page
+            array( $this, 'median_desc_callback' ), // Callback
+            'median-setting-admin', // Page
             'setting_section_id' // Section           
         );      
     }
@@ -88,8 +88,8 @@ class BonesMediumSettingsPage
     public function sanitize( $input )
     {
         $new_input = array();
-        if( isset( $input['bm_desc'] ) )
-            $new_input['bm_desc'] = $input['bm_desc'];
+        if( isset( $input['median_desc'] ) )
+            $new_input['median_desc'] = $input['median_desc'];
 
         return $new_input;
     }
@@ -97,14 +97,14 @@ class BonesMediumSettingsPage
     /** 
      * Get the settings option array and print one of its values
      */
-    public function bm_desc_callback()
+    public function median_desc_callback()
     {
         printf(
-            '<textarea id="bm_desc" name="bm_option_name[bm_desc]" cols="40" rows="3">%s</textarea>',
-            isset( $this->options['bm_desc'] ) ? esc_attr( $this->options['bm_desc']) : ''
+            '<textarea id="median_desc" name="median_option_name[median_desc]" cols="40" rows="3">%s</textarea>',
+            isset( $this->options['median_desc'] ) ? esc_attr( $this->options['median_desc']) : ''
         );
     }
 }
 
 if( is_admin() )
-    $bm_settings_page = new BonesMediumSettingsPage();
+    $median_settings_page = new MedianSettingsPage();

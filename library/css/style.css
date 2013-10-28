@@ -966,7 +966,11 @@ POSTS & CONTENT STYLES
 .entry-content p:first-child {
   margin-top: 0;
 }
-/* line 186, ../scss/_base.scss */
+/* line 185, ../scss/_base.scss */
+.entry-content p:last-child {
+  margin-bottom: 0;
+}
+/* line 189, ../scss/_base.scss */
 .entry-content blockquote {
   font-weight: 400;
   font-style: italic;
@@ -975,33 +979,33 @@ POSTS & CONTENT STYLES
   padding-bottom: 3px;
   margin: -1px 0 0 0;
 }
-/* line 194, ../scss/_base.scss */
+/* line 197, ../scss/_base.scss */
 .entry-content blockquote p {
   margin: 1em 0 0 0;
 }
-/* line 196, ../scss/_base.scss */
+/* line 199, ../scss/_base.scss */
 .entry-content blockquote p:first-child {
   margin-top: 0;
 }
-/* line 202, ../scss/_base.scss */
+/* line 205, ../scss/_base.scss */
 .entry-content dd {
   margin-left: 0;
   font-size: 0.9em;
   color: #787878;
   margin-bottom: 1.5em;
 }
-/* line 209, ../scss/_base.scss */
+/* line 212, ../scss/_base.scss */
 .entry-content img {
   margin: 0;
   max-width: 100%;
   height: auto;
 }
-/* line 225, ../scss/_base.scss */
+/* line 228, ../scss/_base.scss */
 .entry-content video, .entry-content object {
   max-width: 100%;
   height: auto;
 }
-/* line 230, ../scss/_base.scss */
+/* line 233, ../scss/_base.scss */
 .entry-content pre {
   background: #eee;
   border: 1px solid #cecece;
@@ -1009,37 +1013,43 @@ POSTS & CONTENT STYLES
 }
 
 /* end .entry-content */
-/* line 238, ../scss/_base.scss */
+/* line 241, ../scss/_base.scss */
 .wp-caption {
   max-width: 100%;
   position: relative;
   /* images inside wp-caption */
 }
-/* line 243, ../scss/_base.scss */
+/* line 246, ../scss/_base.scss */
 .wp-caption img {
   max-width: 100%;
   margin-bottom: 0;
   width: 100%;
+  vertical-align: top;
+}
+/* line 252, ../scss/_base.scss */
+.wp-caption .img-border {
+  border: 1px solid #eee;
+  display: inline-block;
 }
 
-/* line 250, ../scss/_base.scss */
+/* line 258, ../scss/_base.scss */
 .wp-caption-text {
-  margin: 6px 0;
+  margin: 12px 0 6px;
   font-size: 14px;
   font-style: italic;
   color: #666665;
 }
 
-/* line 258, ../scss/_base.scss */
+/* line 266, ../scss/_base.scss */
 .byline {
   color: #999;
-  margin-top: 0;
+  margin-top: 30px;
 }
-/* line 261, ../scss/_base.scss */
+/* line 269, ../scss/_base.scss */
 .byline a {
   text-decoration: none;
 }
-/* line 263, ../scss/_base.scss */
+/* line 271, ../scss/_base.scss */
 .byline a:hover {
   text-decoration: underline;
 }
@@ -1047,25 +1057,25 @@ POSTS & CONTENT STYLES
 /******************************************************************
 ARCHIVE STYLES
 ******************************************************************/
-/* line 273, ../scss/_base.scss */
+/* line 281, ../scss/_base.scss */
 .excerpt-read-more {
   display: none;
 }
 
-/* line 276, ../scss/_base.scss */
+/* line 284, ../scss/_base.scss */
 .archive-title {
   height: 40px;
   border-top: 1px solid #dededc;
   border-bottom: 1px solid #dededc;
   margin-bottom: 30px;
 }
-/* line 281, ../scss/_base.scss */
+/* line 289, ../scss/_base.scss */
 .archive-title .h2 {
   font-size: 14px;
   font-weight: 400;
   color: #999;
 }
-/* line 285, ../scss/_base.scss */
+/* line 293, ../scss/_base.scss */
 .archive-title .h2 span {
   font-weight: 700;
 }
@@ -1073,17 +1083,17 @@ ARCHIVE STYLES
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
-/* line 296, ../scss/_base.scss */
+/* line 304, ../scss/_base.scss */
 .pagination,
 .wp-prev-next {
   margin: 1.1em 0 2.2em;
 }
 
-/* line 299, ../scss/_base.scss */
+/* line 307, ../scss/_base.scss */
 .pagination {
   text-align: center;
 }
-/* line 301, ../scss/_base.scss */
+/* line 309, ../scss/_base.scss */
 .pagination ul {
   display: inline-block;
   white-space: nowrap;
@@ -1091,7 +1101,7 @@ PAGE NAVI STYLES
   clear: both;
   margin: 1px;
 }
-/* line 307, ../scss/_base.scss */
+/* line 315, ../scss/_base.scss */
 .pagination ul li {
   padding: 0;
   margin: 0;
@@ -1099,7 +1109,7 @@ PAGE NAVI STYLES
   display: inline;
   overflow: hidden;
 }
-/* line 313, ../scss/_base.scss */
+/* line 321, ../scss/_base.scss */
 .pagination ul li a, .pagination ul li span {
   margin: 0;
   text-decoration: none;
@@ -1111,18 +1121,18 @@ PAGE NAVI STYLES
   min-width: 1em;
   display: block;
 }
-/* line 324, ../scss/_base.scss */
+/* line 332, ../scss/_base.scss */
 .pagination ul li span.current {
   font-weight: bold;
 }
 
 /* end .bones_page_navi */
 /* fallback previous & next links */
-/* line 337, ../scss/_base.scss */
+/* line 345, ../scss/_base.scss */
 .wp-prev-next .prev-link {
   float: left;
 }
-/* line 341, ../scss/_base.scss */
+/* line 349, ../scss/_base.scss */
 .wp-prev-next .next-link {
   float: right;
 }
@@ -1131,41 +1141,41 @@ PAGE NAVI STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 353, ../scss/_base.scss */
+/* line 361, ../scss/_base.scss */
 .blog-side {
   margin-bottom: 30px;
 }
 
-/* line 356, ../scss/_base.scss */
+/* line 364, ../scss/_base.scss */
 .blog-img {
   margin: 0 20px 0 0;
   float: left;
 }
-/* line 359, ../scss/_base.scss */
+/* line 367, ../scss/_base.scss */
 .blog-img:hover {
   opacity: 0.8;
 }
-/* line 362, ../scss/_base.scss */
+/* line 370, ../scss/_base.scss */
 .blog-img a {
   display: inline-block;
   vertical-align: top;
   width: 60px;
   height: 60px;
 }
-/* line 368, ../scss/_base.scss */
+/* line 376, ../scss/_base.scss */
 .blog-img img {
   width: 100%;
   height: 100%;
   border-radius: 100%;
 }
 
-/* line 374, ../scss/_base.scss */
+/* line 382, ../scss/_base.scss */
 .blog-author {
   font-size: 16px;
   margin: 0;
 }
 
-/* line 378, ../scss/_base.scss */
+/* line 386, ../scss/_base.scss */
 .blog-desc {
   font-size: 0.875em;
   line-height: 1.4;
@@ -1178,7 +1188,7 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
-/* line 391, ../scss/_base.scss */
+/* line 399, ../scss/_base.scss */
 .footer {
   clear: both;
 }
@@ -1186,7 +1196,7 @@ FOOTER STYLES
 /*********************
 PAGE-SPECIFIC
 *********************/
-/* line 399, ../scss/_base.scss */
+/* line 407, ../scss/_base.scss */
 #post-not-found h1 {
   margin: 0;
   line-height: 1;

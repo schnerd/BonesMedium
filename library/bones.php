@@ -130,8 +130,8 @@ function bones_vcard() {
 }
 
 function bones_description() {
-    $options = get_option('bm_option_name', array());
-    echo $options['bm_desc'] ?: get_bloginfo('description');
+    $options = get_option('median_option_name', array());
+    echo $options['median_desc'] ?: get_bloginfo('description');
 }
 
 function bones_loop() {
