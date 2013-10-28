@@ -1,13 +1,5 @@
 /******************************************************************
-Site Name:
-Author:
-
 Stylesheet: Main Stylesheet
-
-Here's where the magic happens. Here, you'll see we are calling in
-the separate media queries. The base mobile goes outside any query
-and is called at the beginning, after that we call the rest
-of the styles inside media queries.
 ******************************************************************/
 /*! normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */
 /* ==========================================================================
@@ -581,34 +573,21 @@ dd {
 }
 
 /******************************************************************
-Site Name:
-Author:
-
 Stylesheet: Mixins & Constants Stylesheet
-
-This is where you can take advantage of Sass' great features:
-Mixins & Constants. I won't go in-depth on how they work exactly,
-there are a few articles below that will help do that. What I will
-tell you is that this will help speed up simple changes like
-changing a color or adding CSS3 techniques gradients.
-
-A WORD OF WARNING: It's very easy to overdo it here. Be careful and
-remember less is more.
-
 ******************************************************************/
 /*********************
 CLEARFIXIN'
 *********************/
-/* line 23, ../scss/_mixins.scss */
+/* line 10, ../scss/_mixins.scss */
 .clearfix {
   zoom: 1;
 }
-/* line 25, ../scss/_mixins.scss */
+/* line 12, ../scss/_mixins.scss */
 .clearfix:before, .clearfix:after {
   content: "";
   display: table;
 }
-/* line 26, ../scss/_mixins.scss */
+/* line 13, ../scss/_mixins.scss */
 .clearfix:after {
   clear: both;
 }
@@ -616,14 +595,14 @@ CLEARFIXIN'
 /*********************
 TOOLS
 *********************/
-/* line 34, ../scss/_mixins.scss */
+/* line 21, ../scss/_mixins.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 41, ../scss/_mixins.scss */
+/* line 28, ../scss/_mixins.scss */
 .image-replacement {
   text-indent: 100%;
   white-space: nowrap;
@@ -665,53 +644,53 @@ TYPOGRAPHY
 use the best ampersand
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
 */
-/* line 102, ../scss/_mixins.scss */
+/* line 89, ../scss/_mixins.scss */
 span.amp {
   font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
   font-style: italic;
 }
 
-/* line 108, ../scss/_mixins.scss */
+/* line 95, ../scss/_mixins.scss */
 .text-left {
   text-align: left;
 }
 
-/* line 109, ../scss/_mixins.scss */
+/* line 96, ../scss/_mixins.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 110, ../scss/_mixins.scss */
+/* line 97, ../scss/_mixins.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 114, ../scss/_mixins.scss */
+/* line 101, ../scss/_mixins.scss */
 .alert-help, .alert-info, .alert-error, .alert-success {
   margin: 10px;
   padding: 5px 18px;
   border: 1px solid;
 }
 
-/* line 120, ../scss/_mixins.scss */
+/* line 107, ../scss/_mixins.scss */
 .alert-help {
   border-color: #e8dc59;
   background: #ebe16f;
 }
 
-/* line 126, ../scss/_mixins.scss */
+/* line 113, ../scss/_mixins.scss */
 .alert-info {
   border-color: #bfe4f4;
   background: #d5edf8;
 }
 
-/* line 132, ../scss/_mixins.scss */
+/* line 119, ../scss/_mixins.scss */
 .alert-error {
   border-color: #f8cdce;
   background: #fbe3e4;
 }
 
-/* line 138, ../scss/_mixins.scss */
+/* line 125, ../scss/_mixins.scss */
 .alert-success {
   border-color: #deeaae;
   background: #e6efc2;
@@ -741,7 +720,7 @@ probably best not to use it. I mean, were you going to anyway? */
 /*********************
 BUTTONS
 *********************/
-/* line 200, ../scss/_mixins.scss */
+/* line 187, ../scss/_mixins.scss */
 .button, .button:visited {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   border: 1px solid #3784c5;
@@ -759,13 +738,13 @@ BUTTONS
   -moz-transition: all 0.2s;
   transition: all 0.2s;
 }
-/* line 215, ../scss/_mixins.scss */
+/* line 202, ../scss/_mixins.scss */
 .button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
   color: white;
   border: 1px solid #347cb9;
   background-color: #3784c5;
 }
-/* line 220, ../scss/_mixins.scss */
+/* line 207, ../scss/_mixins.scss */
 .button:active, .button:visited:active {
   border: 1px solid #428bca;
   background-color: #4e92cd;
@@ -778,21 +757,12 @@ you set a great foundation, you won't need to add too many styles in
 the other stylesheets. Remember, keep it light: Speed is Important.
 */
 /******************************************************************
-Site Name:
-Author:
-
 Stylesheet: Base Mobile Stylesheet
-
-Be light and don't over style since everything here will be
-loaded by mobile devices. You want to keep it as minimal as
-possible. This is called at the top of the main stylsheet
-and will be used across all viewports.
-
 ******************************************************************/
 /*********************
 GENERAL STYLES
 *********************/
-/* line 18, ../scss/_base.scss */
+/* line 9, ../scss/_base.scss */
 body {
   font-family: "Georgia", Cambria, Times New Roman, Times, serif;
   font-size: 100%;
@@ -800,49 +770,10 @@ body {
   color: #333332;
 }
 
-/********************
-WORDPRESS BODY CLASSES
-style a page via class
-********************/
-/* for sites that are read right to left (i.e. hebrew) */
-/* home page */
-/* blog template page */
-/* archive page */
-/* date archive page */
-/* replace the number to the corresponding page number */
-/* search page */
-/* search result page */
-/* no results search page */
-/* individual paged search (i.e. body.search-paged-3) */
-/* 404 page */
-/* single post page */
-/* individual post page by id (i.e. body.postid-73) */
-/* individual paged single (i.e. body.single-paged-3) */
-/* attatchment page */
-/* individual attatchment page (i.e. body.attachmentid-763) */
-/* style mime type pages */
-/* author page */
-/* user nicename (i.e. body.author-samueladams) */
-/* paged author archives (i.e. body.author-paged-4) for page 4 */
-/* category page */
-/* individual category page (i.e. body.category-6) */
-/* replace the number to the corresponding page number */
-/* tag page */
-/* individual tag page (i.e. body.tag-news) */
-/* replace the number to the corresponding page number */
-/* custom page template page */
-/* individual page template (i.e. body.page-template-contact-php */
-/* replace the number to the corresponding page number */
-/* parent page template */
-/* child page template */
-/* replace the number to the corresponding page number */
-/* if user is logged in */
-/* paged items like search results or archives */
-/* individual paged (i.e. body.paged-3) */
 /*********************
 LAYOUT & GRID STYLES
 *********************/
-/* line 70, ../scss/_base.scss */
+/* line 20, ../scss/_base.scss */
 .wrap {
   width: 96%;
   margin: 0 auto;
@@ -851,7 +782,7 @@ LAYOUT & GRID STYLES
 /*********************
 LINK STYLES
 *********************/
-/* line 79, ../scss/_base.scss */
+/* line 29, ../scss/_base.scss */
 a, a:visited {
   color: #333332;
   text-decoration: underline;
@@ -859,64 +790,54 @@ a, a:visited {
   /* on click */
   /* mobile tap color */
 }
-/* line 84, ../scss/_base.scss */
+/* line 34, ../scss/_base.scss */
 a:hover, a:focus, a:visited:hover, a:visited:focus {
   color: #428bca;
 }
-/* line 94, ../scss/_base.scss */
+/* line 44, ../scss/_base.scss */
 a:link, a:visited:link {
-  /*
-  this highlights links on iPhones/iPads.
-  so it basically works like the :hover selector
-  for mobile devices.
-  */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
 }
 
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
-/* line 108, ../scss/_base.scss */
+/* line 53, ../scss/_base.scss */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
   font-weight: 700;
-  /*
-  if you're going to use webfonts, be sure to check your weights
-  http://css-tricks.com/watch-your-font-weight/
-  */
-  /* removing text decoration from all headline links */
 }
-/* line 118, ../scss/_base.scss */
+/* line 58, ../scss/_base.scss */
 h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
   text-decoration: none;
 }
 
-/* line 123, ../scss/_base.scss */
+/* line 63, ../scss/_base.scss */
 h1, .h1 {
   font-size: 2.5em;
   line-height: 1.333em;
 }
 
-/* line 128, ../scss/_base.scss */
+/* line 68, ../scss/_base.scss */
 h2, .h2 {
   font-size: 1.75em;
   line-height: 1.4em;
   margin-bottom: 0.375em;
 }
 
-/* line 134, ../scss/_base.scss */
+/* line 74, ../scss/_base.scss */
 h3, .h3 {
   font-size: 1.125em;
 }
 
-/* line 138, ../scss/_base.scss */
+/* line 78, ../scss/_base.scss */
 h4, .h4 {
   font-size: 1.1em;
   font-weight: 700;
 }
 
-/* line 143, ../scss/_base.scss */
+/* line 83, ../scss/_base.scss */
 h5, .h5 {
   font-size: 0.846em;
   line-height: 2.09em;
@@ -927,14 +848,14 @@ h5, .h5 {
 /*********************
 EASY TRANSITIONS
 *********************/
-/* line 153, ../scss/_base.scss */
+/* line 93, ../scss/_base.scss */
 .t02 {
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
 }
 
-/* line 156, ../scss/_base.scss */
+/* line 96, ../scss/_base.scss */
 .t05 {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -944,40 +865,15 @@ EASY TRANSITIONS
 /*********************
 NAVIGATION STYLES
 *********************/
-/*
-all navs have a .nav class applied via
-the wp_menu function; this is so we can
-easily write one group of styles for
-the navs on the site so our css is cleaner
-and more scalable.
-*/
-/* line 172, ../scss/_base.scss */
+/* line 104, ../scss/_base.scss */
 .nav {
   /* end .menu li */
-  /* highlight current page */
-  /* end current highlighters */
 }
-/* line 174, ../scss/_base.scss */
-.nav li {
-  /*
-  so you really have to rethink your dropdowns for mobile.
-  you don't want to have it expand too much because the
-  screen is so small. How you manage your menu should
-  depend on the project. Here's some great info on it:
-  http://www.alistapart.com/articles/organizing-mobile/
-  */
-}
-/* line 176, ../scss/_base.scss */
+/* line 107, ../scss/_base.scss */
 .nav li a {
   display: block;
-  /*
-  remember this is for mobile ONLY, so there's no need
-  to even declare hover styles here, you can do it in
-  the style.scss file where it's relevant. We want to
-  keep this file as small as possible!
-  */
 }
-/* line 206, ../scss/_base.scss */
+/* line 113, ../scss/_base.scss */
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
   padding-left: 30px;
@@ -987,7 +883,7 @@ and more scalable.
 /*********************
 THE LOOP
 *********************/
-/* line 241, ../scss/_base.scss */
+/* line 126, ../scss/_base.scss */
 .loop .h2 {
   font-size: 32px;
   margin: 0;
@@ -995,25 +891,25 @@ THE LOOP
   padding-bottom: 6px;
 }
 
-/* line 247, ../scss/_base.scss */
+/* line 132, ../scss/_base.scss */
 .loop .entry-content {
   font-size: 18px;
   padding-bottom: 6px;
   margin-top: 0;
 }
 
-/* line 252, ../scss/_base.scss */
+/* line 137, ../scss/_base.scss */
 .loop p {
   margin: 0;
 }
 
-/* line 255, ../scss/_base.scss */
+/* line 140, ../scss/_base.scss */
 .loop .article-footer {
   padding-top: 2px;
   padding-bottom: 6px;
 }
 
-/* line 259, ../scss/_base.scss */
+/* line 144, ../scss/_base.scss */
 .loop .hentry + .hentry {
   margin-top: 30px;
   border-top: 1px solid #eee;
@@ -1023,12 +919,12 @@ THE LOOP
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-/* line 269, ../scss/_base.scss */
+/* line 154, ../scss/_base.scss */
 #content {
   padding: 20px;
 }
 
-/* line 272, ../scss/_base.scss */
+/* line 157, ../scss/_base.scss */
 #inner-content {
   margin: 0 auto;
   position: relative;
@@ -1038,14 +934,14 @@ POSTS & CONTENT STYLES
   transition: right 0.2s;
 }
 
-/* line 278, ../scss/_base.scss */
+/* line 164, ../scss/_base.scss */
 .entry-title {
   line-height: 100%;
   font-weight: 700;
   margin: 0;
 }
 
-/* line 283, ../scss/_base.scss */
+/* line 169, ../scss/_base.scss */
 .entry-subtitle {
   font-family: "Georgia", Cambria, Times New Roman, Times, serif;
   font-weight: 400;
@@ -1055,71 +951,10 @@ POSTS & CONTENT STYLES
   line-height: 1.2;
 }
 
-/* line 291, ../scss/_base.scss */
-.byline a {
-  text-decoration: none;
-}
-/* line 293, ../scss/_base.scss */
-.byline a:hover {
-  text-decoration: underline;
-}
-
-/* line 297, ../scss/_base.scss */
-.excerpt-read-more {
-  display: none;
-}
-
-/* line 300, ../scss/_base.scss */
+/* entry content */
+/* line 179, ../scss/_base.scss */
 .entry-content {
   margin-top: 20px;
-}
-/* line 302, ../scss/_base.scss */
-.entry-content p:first-child {
-  margin-top: 0;
-}
-
-/* line 306, ../scss/_base.scss */
-.article-footer .byline {
-  margin-top: 0;
-}
-
-/* end .hentry */
-/* line 324, ../scss/_base.scss */
-.archive-title {
-  height: 40px;
-  border-top: 1px solid #dededc;
-  border-bottom: 1px solid #dededc;
-  margin-bottom: 30px;
-}
-/* line 329, ../scss/_base.scss */
-.archive-title .h2 {
-  font-size: 14px;
-  font-weight: 400;
-  color: #b3b3b1;
-}
-/* line 333, ../scss/_base.scss */
-.archive-title .h2 span {
-  font-weight: 700;
-}
-
-/* want to style individual post classes? Booya! */
-/* post by id (i.e. post-3) */
-/* general post style */
-/* general article on a page style */
-/* general style on an attatchment */
-/* sticky post style */
-/* hentry class */
-/* style by category (i.e. category-videos) */
-/* style by tag (i.e. tag-news) */
-/* post meta */
-/* line 350, ../scss/_base.scss */
-.byline {
-  color: #999;
-}
-
-/* entry content */
-/* line 357, ../scss/_base.scss */
-.entry-content {
   /*
   image alignment on a screen this size may be
   a bit difficult. It's set to start aligning
@@ -1127,7 +962,11 @@ POSTS & CONTENT STYLES
   but it's up to you. Feel free to change it up.
   */
 }
-/* line 382, ../scss/_base.scss */
+/* line 182, ../scss/_base.scss */
+.entry-content p:first-child {
+  margin-top: 0;
+}
+/* line 186, ../scss/_base.scss */
 .entry-content blockquote {
   font-weight: 400;
   font-style: italic;
@@ -1136,33 +975,33 @@ POSTS & CONTENT STYLES
   padding-bottom: 3px;
   margin: -1px 0 0 0;
 }
-/* line 390, ../scss/_base.scss */
+/* line 194, ../scss/_base.scss */
 .entry-content blockquote p {
   margin: 1em 0 0 0;
 }
-/* line 392, ../scss/_base.scss */
+/* line 196, ../scss/_base.scss */
 .entry-content blockquote p:first-child {
   margin-top: 0;
 }
-/* line 405, ../scss/_base.scss */
+/* line 202, ../scss/_base.scss */
 .entry-content dd {
   margin-left: 0;
   font-size: 0.9em;
   color: #787878;
   margin-bottom: 1.5em;
 }
-/* line 412, ../scss/_base.scss */
+/* line 209, ../scss/_base.scss */
 .entry-content img {
   margin: 0;
   max-width: 100%;
   height: auto;
 }
-/* line 428, ../scss/_base.scss */
+/* line 225, ../scss/_base.scss */
 .entry-content video, .entry-content object {
   max-width: 100%;
   height: auto;
 }
-/* line 433, ../scss/_base.scss */
+/* line 230, ../scss/_base.scss */
 .entry-content pre {
   background: #eee;
   border: 1px solid #cecece;
@@ -1170,20 +1009,20 @@ POSTS & CONTENT STYLES
 }
 
 /* end .entry-content */
-/* line 441, ../scss/_base.scss */
+/* line 238, ../scss/_base.scss */
 .wp-caption {
   max-width: 100%;
   position: relative;
   /* images inside wp-caption */
 }
-/* line 446, ../scss/_base.scss */
+/* line 243, ../scss/_base.scss */
 .wp-caption img {
   max-width: 100%;
   margin-bottom: 0;
   width: 100%;
 }
 
-/* line 453, ../scss/_base.scss */
+/* line 250, ../scss/_base.scss */
 .wp-caption-text {
   margin: 6px 0;
   font-size: 14px;
@@ -1191,23 +1030,60 @@ POSTS & CONTENT STYLES
   color: #666665;
 }
 
-/* image gallery styles */
-/* end .gallery */
-/* gallery caption styles */
+/* line 258, ../scss/_base.scss */
+.byline {
+  color: #999;
+  margin-top: 0;
+}
+/* line 261, ../scss/_base.scss */
+.byline a {
+  text-decoration: none;
+}
+/* line 263, ../scss/_base.scss */
+.byline a:hover {
+  text-decoration: underline;
+}
+
+/******************************************************************
+ARCHIVE STYLES
+******************************************************************/
+/* line 273, ../scss/_base.scss */
+.excerpt-read-more {
+  display: none;
+}
+
+/* line 276, ../scss/_base.scss */
+.archive-title {
+  height: 40px;
+  border-top: 1px solid #dededc;
+  border-bottom: 1px solid #dededc;
+  margin-bottom: 30px;
+}
+/* line 281, ../scss/_base.scss */
+.archive-title .h2 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #b3b3b1;
+}
+/* line 285, ../scss/_base.scss */
+.archive-title .h2 span {
+  font-weight: 700;
+}
+
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
-/* line 490, ../scss/_base.scss */
+/* line 296, ../scss/_base.scss */
 .pagination,
 .wp-prev-next {
   margin: 1.1em 0 2.2em;
 }
 
-/* line 493, ../scss/_base.scss */
+/* line 299, ../scss/_base.scss */
 .pagination {
   text-align: center;
 }
-/* line 495, ../scss/_base.scss */
+/* line 301, ../scss/_base.scss */
 .pagination ul {
   display: inline-block;
   white-space: nowrap;
@@ -1215,7 +1091,7 @@ PAGE NAVI STYLES
   clear: both;
   margin: 1px;
 }
-/* line 501, ../scss/_base.scss */
+/* line 307, ../scss/_base.scss */
 .pagination ul li {
   padding: 0;
   margin: 0;
@@ -1223,7 +1099,7 @@ PAGE NAVI STYLES
   display: inline;
   overflow: hidden;
 }
-/* line 507, ../scss/_base.scss */
+/* line 313, ../scss/_base.scss */
 .pagination ul li a, .pagination ul li span {
   margin: 0;
   text-decoration: none;
@@ -1235,272 +1111,61 @@ PAGE NAVI STYLES
   min-width: 1em;
   display: block;
 }
-/* line 518, ../scss/_base.scss */
+/* line 324, ../scss/_base.scss */
 .pagination ul li span.current {
   font-weight: bold;
 }
 
 /* end .bones_page_navi */
 /* fallback previous & next links */
-/* line 533, ../scss/_base.scss */
+/* line 337, ../scss/_base.scss */
 .wp-prev-next .prev-link {
   float: left;
 }
-/* line 537, ../scss/_base.scss */
+/* line 341, ../scss/_base.scss */
 .wp-prev-next .next-link {
   float: right;
 }
 
 /* end .wp-prev-next */
-/******************************************************************
-COMMENT STYLES
-******************************************************************/
-/* h3 comment title */
-/* line 548, ../scss/_base.scss */
-#comments {
-  /* number of comments span */
-}
-
-/* line 565, ../scss/_base.scss */
-.commentlist {
-  /* general comment classes */
-  /* vcard */
-  /* end .commentlist .vcard */
-  /* comment meta */
-  /* comment content */
-  /* end .commentlist .comment_content */
-  /* comment reply link */
-  /* end .commentlist .comment-reply-link */
-}
-/* line 567, ../scss/_base.scss */
-.commentlist li {
-  position: relative;
-  clear: both;
-  overflow: hidden;
-  list-style-type: none;
-  margin-bottom: 1.5em;
-  padding: 0.7335em 10px;
-  /* end .commentlist li ul.children */
-}
-/* line 575, ../scss/_base.scss */
-.commentlist li:last-child {
-  margin-bottom: 0;
-}
-/* line 579, ../scss/_base.scss */
-.commentlist li ul.children {
-  margin: 0;
-  /* variations */
-  /* change number for different depth */
-}
-/* line 597, ../scss/_base.scss */
-.commentlist li[class*=depth-] {
-  margin-top: 1.1em;
-}
-/* line 601, ../scss/_base.scss */
-.commentlist li.depth-1 {
-  margin-left: 0;
-  margin-top: 0;
-}
-/* line 606, ../scss/_base.scss */
-.commentlist li:not(.depth-1) {
-  margin-right: -10px;
-  margin-left: -10px;
-  margin-top: 0;
-  padding-bottom: 0;
-}
-/* line 620, ../scss/_base.scss */
-.commentlist .odd {
-  background: #eee;
-}
-/* line 623, ../scss/_base.scss */
-.commentlist .even {
-  background: #fefefe;
-}
-/* line 638, ../scss/_base.scss */
-.commentlist .vcard {
-  margin-left: 50px;
-}
-/* line 641, ../scss/_base.scss */
-.commentlist .vcard cite.fn {
-  font-weight: 700;
-  font-style: normal;
-}
-/* line 649, ../scss/_base.scss */
-.commentlist .vcard time {
-  float: right;
-}
-/* line 652, ../scss/_base.scss */
-.commentlist .vcard time a {
-  color: #999;
-  text-decoration: none;
-}
-/* line 656, ../scss/_base.scss */
-.commentlist .vcard time a:hover {
-  text-decoration: underline;
-}
-/* line 666, ../scss/_base.scss */
-.commentlist .vcard img.avatar {
-  position: absolute;
-  left: 10px;
-  padding: 2px;
-  border: 1px solid #cecece;
-  background: #fff;
-}
-/* line 691, ../scss/_base.scss */
-.commentlist .comment_content {
-  margin-left: 50px;
-}
-/* line 694, ../scss/_base.scss */
-.commentlist .comment_content p {
-  margin: 0.7335em 0 1.5em;
-  font-size: 1em;
-  line-height: 1.5em;
-}
-/* line 703, ../scss/_base.scss */
-.commentlist .comment-reply-link {
-  text-decoration: none;
-  float: right;
-  background: #4598bb;
-  padding: 3px 5px;
-  color: #fff;
-  opacity: 0.65;
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 0.9em;
-}
-/* line 715, ../scss/_base.scss */
-.commentlist .comment-reply-link:hover, .commentlist .comment-reply-link:focus {
-  opacity: 1;
-}
-
-/* end .commentlist */
-/******************************************************************
-COMMENT FORM STYLES
-******************************************************************/
-/* line 727, ../scss/_base.scss */
-.respond-form {
-  margin: 1.5em 10px;
-  padding-bottom: 2.2em;
-}
-/* line 731, ../scss/_base.scss */
-.respond-form form {
-  margin: 0.75em 0;
-}
-/* line 734, ../scss/_base.scss */
-.respond-form form li {
-  list-style-type: none;
-  clear: both;
-  margin-bottom: 0.7335em;
-}
-/* line 740, ../scss/_base.scss */
-.respond-form form li label,
-.respond-form form li small {
-  display: none;
-}
-/* line 748, ../scss/_base.scss */
-.respond-form form input[type=text],
-.respond-form form input[type=email],
-.respond-form form input[type=url],
-.respond-form form textarea {
-  padding: 3px 6px;
-  background: #efefef;
-  border: 2px solid #cecece;
-  line-height: 1.5em;
-  /* form validation */
-}
-/* line 754, ../scss/_base.scss */
-.respond-form form input[type=text]:focus,
-.respond-form form input[type=email]:focus,
-.respond-form form input[type=url]:focus,
-.respond-form form textarea:focus {
-  background: #fff;
-}
-/* line 759, ../scss/_base.scss */
-.respond-form form input[type=text]:invalid,
-.respond-form form input[type=email]:invalid,
-.respond-form form input[type=url]:invalid,
-.respond-form form textarea:invalid {
-  outline: none;
-  border-color: #fbc2c4;
-  background-color: #f6e7eb;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -ms-box-shadow: none;
-  box-shadow: none;
-}
-/* line 772, ../scss/_base.scss */
-.respond-form form input[type=text],
-.respond-form form input[type=email],
-.respond-form form input[type=url] {
-  max-width: 400px;
-  min-width: 250px;
-}
-/* line 777, ../scss/_base.scss */
-.respond-form form textarea {
-  resize: none;
-  width: 97.3%;
-  height: 150px;
-}
-
-/* comment submit button */
-/* comment form title */
-/* line 790, ../scss/_base.scss */
-#comment-form-title {
-  margin: 0 0 1.1em;
-}
-
-/* cancel comment reply link */
-/* logged in comments */
-/* allowed tags */
-/* line 803, ../scss/_base.scss */
-#allowed_tags {
-  margin: 1.5em 10px 0.7335em 0;
-}
-
-/* no comments */
-/* line 808, ../scss/_base.scss */
-.nocomments {
-  margin: 0 20px 1.1em;
-}
-
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 818, ../scss/_base.scss */
+/* line 353, ../scss/_base.scss */
 .blog-side {
   margin-bottom: 30px;
 }
 
-/* line 821, ../scss/_base.scss */
+/* line 356, ../scss/_base.scss */
 .blog-img {
   margin: 0 20px 0 0;
   float: left;
 }
-/* line 824, ../scss/_base.scss */
+/* line 359, ../scss/_base.scss */
 .blog-img:hover {
   opacity: 0.8;
 }
-/* line 827, ../scss/_base.scss */
+/* line 362, ../scss/_base.scss */
 .blog-img a {
   display: inline-block;
   vertical-align: top;
   width: 60px;
   height: 60px;
 }
-/* line 833, ../scss/_base.scss */
+/* line 368, ../scss/_base.scss */
 .blog-img img {
   width: 100%;
   height: 100%;
   border-radius: 100%;
 }
 
-/* line 839, ../scss/_base.scss */
+/* line 374, ../scss/_base.scss */
 .blog-author {
   font-size: 16px;
   margin: 0;
 }
 
-/* line 843, ../scss/_base.scss */
+/* line 378, ../scss/_base.scss */
 .blog-desc {
   font-size: 0.875em;
   line-height: 1.4;
@@ -1510,33 +1175,18 @@ SIDEBARS & ASIDES
   margin-top: 2px;
 }
 
-/* line 858, ../scss/_base.scss */
-.widget ul li {
-  /* deep nesting */
-}
-
 /*********************
 FOOTER STYLES
 *********************/
-/* line 879, ../scss/_base.scss */
+/* line 391, ../scss/_base.scss */
 .footer {
   clear: both;
 }
 
-/*
-if you checked out the link above:
-http://www.alistapart.com/articles/organizing-mobile/
-you'll want to style the footer nav
-a bit more in-depth. Remember to keep
-it simple because you'll have to
-override these styles for the desktop
-view.
-*/
-/* end .footer-links */
 /*********************
 PAGE-SPECIFIC
 *********************/
-/* line 909, ../scss/_base.scss */
+/* line 399, ../scss/_base.scss */
 #post-not-found h1 {
   margin: 0;
   line-height: 1;
@@ -1550,71 +1200,25 @@ tweeners.
 */
 @media only screen and (min-width: 481px) {
   /******************************************************************
-  Site Name: 
-  Author: 
-  
   Stylesheet: 481px and Up Stylesheet
-  
-  This stylesheet is loaded for larger devices. It's set to 
-  481px because at 480px it would load on a landscaped iPhone.
-  This isn't ideal because then you would be loading all those
-  extra styles on that same mobile connection. 
-  
-  A word of warning. This size COULD be a larger mobile device,
-  so you still want to keep it pretty light and simply expand
-  upon your base.scss styles.
-  
   ******************************************************************/
-  /*********************
-  NAVIGATION STYLES
-  *********************/
-  /* .menu is clearfixed inside mixins.scss */
-  /* line 27, ../scss/_481up.scss */
-  .menu {
-    /* end .menu ul */
-  }
-  /* line 28, ../scss/_481up.scss */
-  .menu ul {
-    /* end .menu ul li */
-    /* highlight current page */
-    /* end current highlighters */
-  }
-  /* line 29, ../scss/_481up.scss */
-  .menu ul li {
-    /*
-    plan your menus and drop-downs wisely.
-    */
-  }
-  /* line 30, ../scss/_481up.scss */
-  .menu ul li a {
-    /*
-    you can use hover styles here even though this size
-    has the possibility of being a mobile device.
-    */
-  }
-
-  /* end .menu */
-  /*********************
-  POSTS & CONTENT STYLES
-  *********************/
-  /* entry content */
-  /* line 75, ../scss/_481up.scss */
+  /* line 5, ../scss/_481up.scss */
   .entry-content {
     /* at this larger size, we can start to align images */
   }
-  /* line 79, ../scss/_481up.scss */
+  /* line 8, ../scss/_481up.scss */
   .entry-content .alignleft, .entry-content img.alignleft {
     margin-right: 1.5em;
     display: inline;
     float: left;
   }
-  /* line 84, ../scss/_481up.scss */
+  /* line 13, ../scss/_481up.scss */
   .entry-content .alignright, .entry-content img.alignright {
     margin-left: 1.5em;
     display: inline;
     float: right;
   }
-  /* line 89, ../scss/_481up.scss */
+  /* line 18, ../scss/_481up.scss */
   .entry-content .aligncenter, .entry-content img.aligncenter {
     margin-right: auto;
     margin-left: auto;
@@ -1623,14 +1227,6 @@ tweeners.
   }
 
   /* end .entry-content */
-  /*********************
-  FOOTER STYLES
-  *********************/
-  /*
-  check your menus here. do they look good?
-  do they need tweaking?
-  */
-  /* end .footer-links */
 }
 /*
 TABLET & SMALLER LAPTOPS
@@ -1640,9 +1236,6 @@ you can add resource intensive styles.
 */
 @media only screen and (min-width: 768px) {
   /******************************************************************
-  Site Name:
-  Author:
-  
   Stylesheet: Grid Stylesheet
   
   I've seperated the grid so you can swap it out easily. It's
@@ -1661,115 +1254,102 @@ you can add resource intensive styles.
   values are commented out on each line.
   
   ******************************************************************/
-  /* line 24, ../scss/_grid.scss */
+  /* line 21, ../scss/_grid.scss */
   .onecol {
     width: 5.801104972%;
   }
 
   /* 4.85%;  } /* grid_1  */
-  /* line 25, ../scss/_grid.scss */
+  /* line 22, ../scss/_grid.scss */
   .twocol {
     width: 14.364640883%;
   }
 
   /* 13.45%; } /* grid_2  */
-  /* line 26, ../scss/_grid.scss */
+  /* line 23, ../scss/_grid.scss */
   .threecol {
     width: 22.928176794%;
   }
 
   /* 22.05%; } /* grid_3  */
-  /* line 27, ../scss/_grid.scss */
+  /* line 24, ../scss/_grid.scss */
   .fourcol {
     width: 31.491712705%;
   }
 
   /* 30.75%; } /* grid_4  */
-  /* line 28, ../scss/_grid.scss */
+  /* line 25, ../scss/_grid.scss */
   .fivecol {
     width: 40.055248616%;
   }
 
   /* 39.45%; } /* grid_5  */
-  /* line 29, ../scss/_grid.scss */
+  /* line 26, ../scss/_grid.scss */
   .sixcol {
     width: 48.618784527%;
   }
 
   /* 48%;    } /* grid_6  */
-  /* line 30, ../scss/_grid.scss */
+  /* line 27, ../scss/_grid.scss */
   .sevencol {
     width: 57.182320438000005%;
   }
 
   /* 56.75%; } /* grid_7  */
-  /* line 31, ../scss/_grid.scss */
+  /* line 28, ../scss/_grid.scss */
   .eightcol {
     width: 65.74585634900001%;
   }
 
   /* 65.4%;  } /* grid_8  */
-  /* line 32, ../scss/_grid.scss */
+  /* line 29, ../scss/_grid.scss */
   .ninecol {
     width: 74.30939226%;
   }
 
   /* 74.05%; } /* grid_9  */
-  /* line 33, ../scss/_grid.scss */
+  /* line 30, ../scss/_grid.scss */
   .tencol {
     width: 82.87292817100001%;
   }
 
   /* 82.7%;  } /* grid_10 */
-  /* line 34, ../scss/_grid.scss */
+  /* line 31, ../scss/_grid.scss */
   .elevencol {
     width: 91.436464082%;
   }
 
   /* 91.35%; } /* grid_11 */
-  /* line 35, ../scss/_grid.scss */
+  /* line 32, ../scss/_grid.scss */
   .twelvecol {
     width: 99.999999993%;
   }
 
   /* 100%;   } /* grid_12 */
-  /* line 38, ../scss/_grid.scss */
+  /* line 35, ../scss/_grid.scss */
   .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
     position: relative;
     float: left;
     margin-left: 2.762430939%;
   }
 
-  /* line 44, ../scss/_grid.scss */
+  /* line 41, ../scss/_grid.scss */
   .first {
     margin-left: 0;
   }
 
-  /* line 48, ../scss/_grid.scss */
+  /* line 45, ../scss/_grid.scss */
   .last {
     float: right;
   }
 
   /******************************************************************
-  Site Name:
-  Author:
-  
   Stylesheet: Tablet & Small Desktop Stylesheet
-  
-  Here's where you can start getting into the good stuff.
-  This size will work on iPads, other tablets, and desktops.
-  So you can start working with more styles, background images,
-  and other resources. You'll also notice the grid starts to
-  come into play. Have fun!
-  
   ******************************************************************/
-  /*********************
-  GENERAL STYLES
-  *********************/
   /*********************
   LAYOUT & GRID STYLES
   *********************/
-  /* line 26, ../scss/_768up.scss */
+  /* line 9, ../scss/_768up.scss */
   .wrap {
     max-width: 1140px;
   }
@@ -1777,17 +1357,15 @@ you can add resource intensive styles.
   /*********************
   NAVIGATION STYLES
   *********************/
-  /* line 34, ../scss/_768up.scss */
+  /* line 17, ../scss/_768up.scss */
   .nav {
     /* end .menu ul li */
-    /* highlight current page */
-    /* end current highlighters */
   }
-  /* line 36, ../scss/_768up.scss */
+  /* line 19, ../scss/_768up.scss */
   .nav > ul {
     margin: 10px 0;
   }
-  /* line 40, ../scss/_768up.scss */
+  /* line 23, ../scss/_768up.scss */
   .nav li {
     position: relative;
     margin-top: 4px;
@@ -1796,30 +1374,26 @@ you can add resource intensive styles.
     */
     /* showing sub-menus */
   }
-  /* line 44, ../scss/_768up.scss */
+  /* line 27, ../scss/_768up.scss */
   .nav li a {
     display: inline-block;
     border-bottom: 0;
-    /*
-    you can use hover styles here even though this size
-    has the possibility of being a mobile device.
-    */
   }
-  /* line 56, ../scss/_768up.scss */
+  /* line 32, ../scss/_768up.scss */
   .nav li .button {
     font-size: 12px;
     padding: 2px 6px;
   }
-  /* line 60, ../scss/_768up.scss */
+  /* line 36, ../scss/_768up.scss */
   .nav li.current-menu-item .button {
     border-color: #5e9cd2;
     background-color: #6aa3d5;
   }
-  /* line 65, ../scss/_768up.scss */
+  /* line 41, ../scss/_768up.scss */
   .nav li:first-child {
     margin-top: 0;
   }
-  /* line 74, ../scss/_768up.scss */
+  /* line 49, ../scss/_768up.scss */
   .nav li ul.sub-menu,
   .nav li ul.children {
     margin-top: 0;
@@ -1828,18 +1402,8 @@ you can add resource intensive styles.
     position: absolute;
     display: none;
     z-index: 8999;
-    /* highlight sub-menu current page */
   }
-  /* line 82, ../scss/_768up.scss */
-  .nav li ul.sub-menu li,
-  .nav li ul.children li {
-    /*
-    if you need to go deeper, go nuts
-    just remember deeper menus suck
-    for usability. k, bai.
-    */
-  }
-  /* line 84, ../scss/_768up.scss */
+  /* line 59, ../scss/_768up.scss */
   .nav li ul.sub-menu li a,
   .nav li ul.children li a {
     padding-left: 10px;
@@ -1848,12 +1412,12 @@ you can add resource intensive styles.
     width: 180px;
     border-bottom: 1px solid #ccc;
   }
-  /* line 101, ../scss/_768up.scss */
+  /* line 68, ../scss/_768up.scss */
   .nav li ul.sub-menu li:last-child a,
   .nav li ul.children li:last-child a {
     border-bottom: 0;
   }
-  /* line 123, ../scss/_768up.scss */
+  /* line 76, ../scss/_768up.scss */
   .nav li:hover ul {
     top: auto;
     display: block;
@@ -1863,76 +1427,45 @@ you can add resource intensive styles.
   /*********************
   SIDEBARS & ASIDES
   *********************/
-  /* line 145, ../scss/_768up.scss */
+  /* line 91, ../scss/_768up.scss */
   .widgettitle {
     border-bottom: 2px solid #444;
     margin-bottom: 0.75em;
   }
 
-  /* line 150, ../scss/_768up.scss */
+  /* line 96, ../scss/_768up.scss */
   .widget {
     padding: 0 10px;
     margin: 2.2em 0;
   }
-  /* line 155, ../scss/_768up.scss */
+  /* line 101, ../scss/_768up.scss */
   .widget ul li {
     margin-bottom: 0.75em;
-    /* deep nesting */
   }
-  /* line 163, ../scss/_768up.scss */
+  /* line 104, ../scss/_768up.scss */
   .widget ul li ul {
     margin-top: 0.75em;
     padding-left: 1em;
   }
 
-  /* links widget */
-  /* meta widget */
-  /* pages widget */
-  /* recent-posts widget */
-  /* archives widget */
-  /* tag-cloud widget */
-  /* calendar widget */
-  /* category widget */
-  /* recent-comments widget */
-  /* search widget */
-  /* text widget */
   /*********************
   POSTS & CONTENT STYLES
   *********************/
-  /* line 262, ../scss/_768up.scss */
+  /* line 115, ../scss/_768up.scss */
   .entry-content {
     font-size: 1.375em;
     font-weight: 400;
   }
 
-  /* line 266, ../scss/_768up.scss */
+  /* line 119, ../scss/_768up.scss */
   .entry-title {
     font-size: 3.25em;
   }
 
-  /* line 269, ../scss/_768up.scss */
+  /* line 122, ../scss/_768up.scss */
   .entry-subtitle {
     font-size: 2em;
   }
-
-  /*********************
-  FOOTER STYLES
-  *********************/
-  /*
-  you'll probably need to do quite a bit
-  of overriding here if you styled them for
-  mobile. Make sure to double check these!
-  */
-  /* line 284, ../scss/_768up.scss */
-  .footer-links ul li {
-    /*
-    be careful with the depth of your menus.
-    it's very rare to have multi-depth menus in
-    the footer.
-    */
-  }
-
-  /* end .footer-links */
 }
 /*
 DESKTOP
@@ -1942,28 +1475,21 @@ you can add resource intensive styles.
 */
 @media only screen and (min-width: 1030px) {
   /******************************************************************
-  Site Name: 
-  Author: 
-  
   Stylesheet: Desktop Stylsheet
-  
-  This is the desktop size. It's larger than an iPad so it will only
-  be seen on the Desktop. 
-  
   ******************************************************************/
-  /* line 14, ../scss/_1030up.scss */
+  /* line 5, ../scss/_1030up.scss */
   #content {
     padding: 120px 20px 60px;
   }
 
-  /* line 17, ../scss/_1030up.scss */
+  /* line 8, ../scss/_1030up.scss */
   #inner-content {
     max-width: 700px;
     margin-left: 250px;
     margin-right: auto;
   }
 
-  /* line 23, ../scss/_1030up.scss */
+  /* line 14, ../scss/_1030up.scss */
   .blog-side {
     position: absolute;
     width: 160px;
@@ -1974,28 +1500,28 @@ you can add resource intensive styles.
     margin-bottom: 0;
   }
 
-  /* line 32, ../scss/_1030up.scss */
+  /* line 23, ../scss/_1030up.scss */
   .blog-img {
     margin: 0;
     float: none;
   }
-  /* line 35, ../scss/_1030up.scss */
+  /* line 26, ../scss/_1030up.scss */
   .blog-img a {
     width: 80px;
     height: 80px;
   }
 
-  /* line 40, ../scss/_1030up.scss */
+  /* line 31, ../scss/_1030up.scss */
   .blog-author {
     margin: 4px 0 0 0;
   }
 
-  /* line 44, ../scss/_1030up.scss */
+  /* line 35, ../scss/_1030up.scss */
   .entry-content blockquote {
     margin: -1px auto 0 -26px;
   }
 
-  /* line 47, ../scss/_1030up.scss */
+  /* line 39, ../scss/_1030up.scss */
   .wp-caption-text {
     position: absolute;
     left: -172px;
@@ -2004,7 +1530,7 @@ you can add resource intensive styles.
     text-align: right;
     margin-top: 16px;
   }
-  /* line 54, ../scss/_1030up.scss */
+  /* line 46, ../scss/_1030up.scss */
   .wp-caption-text:before {
     display: block;
     content: '';
@@ -2021,16 +1547,9 @@ This is for the larger monitors and possibly full screen viewers.
 */
 @media only screen and (min-width: 1240px) {
   /******************************************************************
-  Site Name: 
-  Author: 
-  
-  Stylesheet: Super Large Monitor Stylesheet
-  
-  You can add some advanced styles here if you like. This kicks in
-  on larger screens.
-  
+  Stylesheet: Large Monitor Stylesheet
   ******************************************************************/
-  /* line 11, ../scss/_1240up.scss */
+  /* line 5, ../scss/_1240up.scss */
   #inner-content {
     max-width: 700px;
     margin: 0 auto;
@@ -2044,15 +1563,7 @@ query for retina AND a certain size if you want. Go Nuts.
 */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   /******************************************************************
-  Site Name: 
-  Author: 
-  
   Stylesheet: Retina Screens & Devices Stylesheet
-  
-  When handling retina screens you need to make adjustments, especially
-  if you're not using font icons. Here you can add them in one neat
-  place.
-  
   ******************************************************************/
   /* 
   
@@ -2096,17 +1607,9 @@ be set to display none.
 */
 @media print {
   /******************************************************************
-  Site Name:
-  Author:
-  
   Stylesheet: Print Stylesheet
-  
-  This is the print stylesheet. There's probably not a lot
-  of reasons to edit this stylesheet. If you want to
-  though, go for it.
-  
   ******************************************************************/
-  /* line 15, ../scss/_print.scss */
+  /* line 7, ../scss/_print.scss */
   * {
     background: transparent !important;
     color: black !important;
@@ -2115,44 +1618,44 @@ be set to display none.
     -ms-filter: none !important;
   }
 
-  /* line 23, ../scss/_print.scss */
+  /* line 15, ../scss/_print.scss */
   a, a:visited {
     color: #444 !important;
     text-decoration: underline;
   }
-  /* line 28, ../scss/_print.scss */
+  /* line 20, ../scss/_print.scss */
   a:after, a:visited:after {
     content: " (" attr(href) ")";
   }
-  /* line 33, ../scss/_print.scss */
+  /* line 25, ../scss/_print.scss */
   a abbr[title]:after, a:visited abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 40, ../scss/_print.scss */
+  /* line 32, ../scss/_print.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 44, ../scss/_print.scss */
+  /* line 36, ../scss/_print.scss */
   pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 49, ../scss/_print.scss */
+  /* line 41, ../scss/_print.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 53, ../scss/_print.scss */
+  /* line 45, ../scss/_print.scss */
   tr, img {
     page-break-inside: avoid;
   }
 
-  /* line 57, ../scss/_print.scss */
+  /* line 49, ../scss/_print.scss */
   img {
     max-width: 100% !important;
   }
@@ -2161,19 +1664,19 @@ be set to display none.
     margin: 0.5cm;
 }
 
-  /* line 65, ../scss/_print.scss */
+  /* line 57, ../scss/_print.scss */
   p, h2, h3 {
     orphans: 3;
     widows: 3;
   }
 
-  /* line 71, ../scss/_print.scss */
+  /* line 63, ../scss/_print.scss */
   h2,
   h3 {
     page-break-after: avoid;
   }
 
-  /* line 80, ../scss/_print.scss */
+  /* line 72, ../scss/_print.scss */
   .sidebar,
   .page-navigation,
   .wp-prev-next,
