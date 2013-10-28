@@ -1063,7 +1063,7 @@ ARCHIVE STYLES
 .archive-title .h2 {
   font-size: 14px;
   font-weight: 400;
-  color: #b3b3b1;
+  color: #999;
 }
 /* line 285, ../scss/_base.scss */
 .archive-title .h2 span {

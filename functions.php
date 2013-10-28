@@ -24,6 +24,10 @@ sidebars, comments, ect.
 	- adding custom fields to user profiles
 */
 require_once( 'library/bones.php' ); // if you remove this, bones will break
+
+if (is_admin()) {
+	require_once( 'library/settings.php' );
+}
 /*
 3. library/admin.php
 	- removing some default WordPress dashboard widgets

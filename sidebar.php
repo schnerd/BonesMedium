@@ -4,13 +4,13 @@
 
 						<p class="blog-img t02">
 							<a href="<?php echo home_url(); ?>" rel="nofollow">
-								<img src="<?php echo bones_blog_image(); ?>"/>
+								<img src="<?php echo get_custom_header()->url; ?>"/>
 							</a>
 						</p>
 
 						<p class="blog-author h3"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
 
-						<p class="blog-desc"><?php bloginfo('description'); ?></p>
+						<p class="blog-desc"><?php bones_description(); ?></p>
 
 						<?php $main_nav = bones_main_nav(); ?>
 						<?php if ( $main_nav ) : ?>

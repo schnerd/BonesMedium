@@ -115,17 +115,6 @@ function bones_gallery_style($css) {
   return preg_replace( "!<style type='text/css'>(.*?)</style>!s", '', $css );
 }
 
-function bones_blog_image() {
-	// Eventually insert magic here
-	$blog_image = null;
-
-	if (!$blog_image) {
-		$blog_image = get_template_directory_uri() . '/screenshot.png';
-	}
-	
-	return $blog_image;
-}
-
 function bones_vcard() {
 	printf( '<time class="updated" datetime="%1$s" pubdate>%2$s</time>', get_the_time( 'Y-m-j' ), get_the_time( get_option('date_format')) );
 
@@ -140,13 +129,18 @@ function bones_vcard() {
 	}
 }
 
+function bones_description() {
+    $options = get_option('bm_option_name', array());
+    echo $options['bm_desc'] ?: get_bloginfo('description');
+}
+
 function bones_loop() {
 	require_once('loop.php');
 }
 
 function bones_no_results() {
 	require_once('noresults.php');
-}
+} 
 
 /*********************
 SCRIPTS & ENQUEUEING
@@ -161,7 +155,7 @@ function bones_scripts_and_styles() {
     wp_register_script( 'bones-modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
 
     // Custom fonts
-    wp_register_style( 'custom-font1', 'http://fonts.googleapis.com/css?family=Open+Sans:400,700', array(), 'all');
+    wp_register_style( 'bones-custom-font', 'http://fonts.googleapis.com/css?family=Open+Sans:400,700', array(), 'all');
 
     // register main stylesheet
     wp_register_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
@@ -179,7 +173,7 @@ function bones_scripts_and_styles() {
 
     // enqueue styles and scripts
     wp_enqueue_script( 'bones-modernizr' );
-    wp_enqueue_style( 'custom-font1' );
+    wp_enqueue_style( 'bones-custom-font' );
     wp_enqueue_style( 'bones-stylesheet' );
     wp_enqueue_style( 'bones-ie-only' );
 
@@ -209,17 +203,6 @@ function bones_theme_support() {
 	// default thumb size
 	set_post_thumbnail_size(125, 125, true);
 
-	// wp custom background (thx to @bransonwerner for update)
-	add_theme_support( 'custom-background',
-	    array(
-	    'default-image' => '',  // background image default
-	    'default-color' => '', // background color default (dont add the #)
-	    'wp-head-callback' => '_custom_background_cb',
-	    'admin-head-callback' => '',
-	    'admin-preview-callback' => ''
-	    )
-	);
-
 	// rss thingy
 	add_theme_support('automatic-feed-links');
 
@@ -237,6 +220,17 @@ function bones_theme_support() {
 			'video',             // video
 			'audio',             // audio
 			'chat'               // chat transcript
+		)
+	);
+
+	// adding custom header image support
+	add_theme_support( 'custom-header',
+		array(
+			'width'         => 80,
+			'height'        => 80,
+			'default-image' => get_template_directory_uri() . '/screenshot.png',
+			'uploads'       => true,
+			'header-text'   => false
 		)
 	);
 
