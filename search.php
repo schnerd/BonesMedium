@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 
-						<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'bonestheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
+						<div class="archive-title">
+							<h1><span><?php _e( 'Search Results', 'bonestheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
+						</div>
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 

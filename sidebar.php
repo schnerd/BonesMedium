@@ -1,6 +1,6 @@
 				<div class="sidebar">
 
-					<div class="blog-side">
+					<div class="blog-side clearfix">
 
 						<p class="blog-img t02">
 							<a href="<?php echo home_url(); ?>" rel="nofollow">

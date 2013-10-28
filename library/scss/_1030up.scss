@@ -8,3 +8,56 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop. 
 
 ******************************************************************/
+
+
+
+#content {
+	padding: 120px 20px 60px;
+}
+#inner-content {
+	max-width: 700px;
+	margin-left: 250px;
+	margin-right: auto;
+}
+
+.blog-side {
+	position: absolute;
+	width: 160px;
+	left: -230px;
+	border-top: 0;
+	padding-top: 0;
+	text-align: right;
+	margin-bottom: 0;
+}
+.blog-img {
+	margin: 0;
+	float: none;
+	a {
+		width: 80px;
+		height: 80px;
+	}
+}
+.blog-author {
+	margin: 4px 0 0 0;
+}
+
+.entry-content blockquote {
+	margin: -1px auto 0 -26px;
+}
+.wp-caption-text {
+	position: absolute;
+	left: -172px;
+	width: 150px;
+	top: 0;
+	text-align: right;
+	margin-top: 16px;
+	&:before {
+		display: block;
+		content: '';
+		width: 50px;
+		border-top: 2px solid #ddd;
+		position: absolute;
+		right: 0;
+		top: -10px;
+	}
+}

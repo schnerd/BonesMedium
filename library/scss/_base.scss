@@ -267,14 +267,18 @@ POSTS & CONTENT STYLES
 *********************/
 
 #content {
-	padding: 20px 0;
+	padding: 20px;
 }
 #inner-content {
-	max-width: 700px;
 	margin: 0 auto;
 	position: relative;
 	right: 0;
 	@include transition(right 0.2s);
+}
+.entry-title {
+	line-height: 100%;
+	font-weight: 700;
+	margin: 0;
 }
 .entry-subtitle {
 	font-family: $serif;
@@ -283,7 +287,6 @@ POSTS & CONTENT STYLES
 	color: #333332;
 	margin: 20px 0;
 	line-height: 1.2;
-	font-size: 32px;
 }
 .byline a {
 	text-decoration: none;
@@ -296,6 +299,9 @@ POSTS & CONTENT STYLES
 }
 .entry-content {
 	margin-top: 20px;
+	p:first-child {
+		margin-top: 0;
+	}
 }
 .article-footer .byline {
 	margin-top: 0;
@@ -315,7 +321,20 @@ POSTS & CONTENT STYLES
 
 		.page-title {}
 
-		.archive-title { }
+		.archive-title { 
+			height: 40px;
+			border-top: 1px solid #dededc;
+			border-bottom: 1px solid #dededc;
+			margin-bottom: 30px;
+			.h2 {
+				font-size: 14px;
+				font-weight: 400;
+				color: #b3b3b1;
+				span {
+					font-weight: 700;
+				}
+			}
+		}
 
 		/* want to style individual post classes? Booya! */
 		.post-id {}         /* post by id (i.e. post-3) */
@@ -366,7 +385,7 @@ POSTS & CONTENT STYLES
 				border-left: 6px solid $theme-color;
 				padding-left: 20px;
 				padding-bottom: 3px;
-				margin: -1px auto 0 -26px;
+				margin: -1px 0 0 0;
 
 				p {
 					margin: 1em 0 0 0;
@@ -429,29 +448,14 @@ POSTS & CONTENT STYLES
 				margin-bottom: 0;
 				width: 100%;
 			}
+		}
 
-			.wp-caption-text {
-				position: absolute;
-				left: -172px;
-				width: 150px;
-				top: 0;
-				text-align: right;
-				margin-top: 16px;
-				font-size: 14px;
-				font-style: italic;
-				color: #666665;
-				&:before {
-					display: block;
-					content: '';
-					width: 50px;
-					border-top: 2px solid #ddd;
-					position: absolute;
-					right: 0;
-					top: -10px;
-				}
-			}
-
-		} /* end .wp-caption */
+		.wp-caption-text {
+			margin: 6px 0;
+			font-size: 14px;
+			font-style: italic;
+			color: #666665;
+		}
 
 		/* image gallery styles */
 		.gallery {
@@ -812,23 +816,19 @@ SIDEBARS & ASIDES
 .sidebar {}
 
 .blog-side {
-	position: absolute;
-	width: 160px;
-	left: -230px;
-	border-top: 0;
-	padding-top: 0;
-	text-align: right;
+	margin-bottom: 30px;
 }
 .blog-img {
-	margin: 0;
+	margin: 0 20px 0 0;
+	float: left;
 	&:hover {
 		opacity: 0.8;
 	}
 	a {
 		display: inline-block;
 		vertical-align: top;
-		width: 80px;
-		height: 80px;
+		width: 60px;
+		height: 60px;
 	}
 	img {
 		width: 100%;
@@ -837,11 +837,11 @@ SIDEBARS & ASIDES
 	}
 }
 .blog-author {
-	margin: 4px 0 0 0;
 	font-size: 16px;
+	margin: 0;
 }
 .blog-desc {
-	font-size: 14px;
+	font-size: 0.875em;
 	line-height: 1.4;
 	color: #666665;
 	word-wrap: break-word;

@@ -8,7 +8,7 @@
 
 									<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
 
-									<?php $post = get_post(); /*$excerpt = get_the_excerpt();*/ if ( $post->post_excerpt ) : ?>
+									<?php $post = get_post(); if ( $post->post_excerpt ) : ?>
 
 									<h2 class="entry-subtitle"><?php echo $post->post_excerpt; ?></h2>
 
