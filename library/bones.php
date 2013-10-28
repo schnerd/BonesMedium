@@ -160,7 +160,7 @@ function bones_scripts_and_styles() {
     // modernizr (without media query polyfill)
     wp_register_script( 'bones-modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
 
-    // Source Sans Pro font
+    // Custom fonts
     wp_register_style( 'custom-font1', 'http://fonts.googleapis.com/css?family=Open+Sans:400,700', array(), 'all');
 
     // register main stylesheet

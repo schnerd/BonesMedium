@@ -1,43 +1,49 @@
 
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+							<?php if (have_posts()) : ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
+							<div class="loop">
 
-								<header class="article-header">
+								<?php while (have_posts()) : the_post(); ?>
 
-									<h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+								<article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?> role="article">
 
-								</header> <?php // end article header ?>
+									<header class="article-header">
 
-								<section class="entry-content clearfix">
+										<h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
-									<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
+									</header> <?php // end article header ?>
 
-									<?php the_excerpt(); ?>
+									<section class="entry-content clearfix">
 
-								</section> <?php // end article section ?>
+										<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
 
-								<footer class="article-footer">
+										<?php the_excerpt(); ?>
 
-									<p class="byline vcard"><?php bones_vcard(); ?></p>
+									</section> <?php // end article section ?>
 
-								</footer> <?php // end article footer ?>
+									<footer class="article-footer">
 
-							</article> <?php // end article ?>
+										<p class="byline vcard"><?php bones_vcard(); ?></p>
 
-							<?php endwhile; ?>
+									</footer> <?php // end article footer ?>
 
-									<?php if ( function_exists( 'bones_page_navi' ) ) { ?>
-										<?php bones_page_navi(); ?>
-									<?php } else { ?>
-										<nav class="wp-prev-next">
-											<ul class="clearfix">
-												<li class="prev-link"><?php next_posts_link( __( '&laquo; Older Entries', 'bonestheme' )) ?></li>
-												<li class="next-link"><?php previous_posts_link( __( 'Newer Entries &raquo;', 'bonestheme' )) ?></li>
-											</ul>
-										</nav>
-									<?php } ?>
+								</article> <?php // end article ?>
+
+								<?php endwhile; ?>
+
+							</div>
+
+								<?php if ( function_exists( 'bones_page_navi' ) ) { ?>
+									<?php bones_page_navi(); ?>
+								<?php } else { ?>
+									<nav class="wp-prev-next">
+										<ul class="clearfix">
+											<li class="prev-link"><?php next_posts_link( __( '&laquo; Older Entries', 'bonestheme' )) ?></li>
+											<li class="next-link"><?php previous_posts_link( __( 'Newer Entries &raquo;', 'bonestheme' )) ?></li>
+										</ul>
+									</nav>
+								<?php } ?>
 
 							<?php else : ?>
 

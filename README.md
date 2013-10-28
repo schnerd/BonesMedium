@@ -1,7 +1,7 @@
 # BonesMedium
 
-__A [Medium](http://www.medium.com)-inspired theme based off [Bones](https://github.com/eddiemachado/bones)__
+A [Medium](http://www.medium.com)-inspired theme based off [Bones](https://github.com/eddiemachado/bones)
 
 ## License
 
-__[WTFPL](http://sam.zoy.org/wtfpl/)__
+[WTFPL](http://sam.zoy.org/wtfpl/)

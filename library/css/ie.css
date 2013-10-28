@@ -181,7 +181,7 @@ BUTTONS
 /* line 200, ../scss/_mixins.scss */
 .button, .button:visited {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  border: 1px solid #5d2456;
+  border: 1px solid #3784c5;
   padding: 4px 12px 6px;
   color: white;
   display: inline-block;
@@ -189,7 +189,7 @@ BUTTONS
   text-decoration: none;
   cursor: pointer;
   line-height: 150%;
-  background-color: #682860;
+  background-color: #428bca;
   border-radius: 3px;
   font-weight: 300;
   -webkit-transition: all 0.2s;
@@ -199,13 +199,13 @@ BUTTONS
 /* line 215, ../scss/_mixins.scss */
 .button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
   color: white;
-  border: 1px solid #52204c;
-  background-color: #5d2456;
+  border: 1px solid #347cb9;
+  background-color: #3784c5;
 }
 /* line 220, ../scss/_mixins.scss */
 .button:active, .button:visited:active {
-  border: 1px solid #682860;
-  background-color: #732c6a;
+  border: 1px solid #428bca;
+  background-color: #4e92cd;
 }
 
 /******************************************************************
@@ -463,8 +463,8 @@ NAVIGATION STYLES
 }
 /* line 60, ../scss/_768up.scss */
 .nav li.current-menu-item .button {
-  border-color: #823278;
-  background-color: #8d3682;
+  border-color: #5e9cd2;
+  background-color: #6aa3d5;
 }
 /* line 65, ../scss/_768up.scss */
 .nav li:first-child {
